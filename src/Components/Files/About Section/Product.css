@@ -1,0 +1,224 @@
+/*  Todo: custom css */
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.align2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  * custom css ends */
+
+.SecondPage {
+    /* background: rgb(212, 235, 255);
+    background: linear-gradient(180deg, rgba(212, 235, 255, 1) 8%, rgba(255, 255, 255, 1) 29%, rgba(231, 243, 252, 1) 51%, rgba(255, 255, 255, 1) 72%, rgba(195, 227, 255, 1) 94%);
+    margin-bottom: 10px; */
+}
+
+.productjsx h1 {
+    font-size: 60px;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+}
+
+strong {
+    margin-top: -40px;
+}
+
+.img12 {
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    border: 10px solid yellowgreen;
+}
+
+.pdt_name {
+    font-size: 23px;
+    margin-top: 10px;
+    color: rgb(255, 76, 106);
+    font-weight: bolder;
+    text-shadow: .1px .1px 1px black;
+}
+
+.container331,
+.container332 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem;
+}
+
+.container332 {
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+
+
+/*  todo : every div css */
+.PDT_heading h1 {
+    margin: 1rem 0px -5rem 0px;
+    font-size: 40px;
+    text-decoration: underline;
+    color: orange;
+}
+
+.grid_system {
+    display: grid;
+    grid-template-columns: 18rem 18rem 18rem 18rem;
+    margin-top: 50px;
+}
+
+
+/* todo:  */
+.unique {
+    margin-top: 5rem;
+    border: 1px solid orangered;
+    margin-left: 2px;
+}
+
+.unique img {
+    width: 230px;
+    height: 230px;
+    margin: 5px;
+}
+
+.unique h1 {
+    margin: 0px;
+    font-size: 24px;
+    color: orange;
+    text-decoration: none;
+}
+
+.unique small {
+    font-size: 20px;
+}
+
+.unique button {
+    background-color: orangered;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.pdt_name {
+    margin-bottom: 30px;
+}
+
+
+
+/* todo  : media queries */
+
+@media screen and (max-width: 1134px) {
+    .grid_system {
+        display: grid;
+        grid-template-columns: 18rem 18rem 18rem;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 865px) {
+    .grid_system {
+        display: grid;
+        grid-template-columns: 18rem 18rem;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 714px) {
+    .img12 {
+        height: 90px;
+        width: 90px;
+    }
+
+    .pdt_name {
+        font-size: 20px;
+    }
+
+    .container331,
+    .container332 {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 13rem 13rem 13rem;
+    }
+
+}
+
+@media screen and (max-width: 631px) {
+    .img12 {
+        height: 90px;
+        width: 90px;
+    }
+
+    .pdt_name {
+        font-size: 15px;
+    }
+
+    .unique img {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+    }
+
+    .container331,
+    .container332 {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 13rem 13rem;
+    }
+
+}
+
+@media screen and (max-width: 595px) {
+    .unique img {
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+    }
+    .grid_system {
+        display: grid;
+        grid-template-columns: 15rem 15rem;
+        margin-top: 50px;
+    }
+    .unique h1{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 503px) {
+    .grid_system {
+        display: grid;
+        grid-template-columns: 12rem 12rem;
+        margin-top: 50px;
+    }
+    .container331,
+    .container332 {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+    }
+    
+}
+@media screen and (max-width: 390px) {
+    .grid_system {
+        display: grid;
+        grid-template-columns: 11rem 11rem;
+        margin-top: 50px;
+    }
+    .PDT_heading h1 {
+        font-size: 32px;
+    }
+    .unique h1{
+        font-size: 17px;
+    }
+    .bakery_name p {
+        margin: 0px 14px;
+    }
+}

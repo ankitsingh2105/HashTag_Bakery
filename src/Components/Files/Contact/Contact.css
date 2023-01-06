@@ -1,0 +1,102 @@
+/*  Todo: custom css */
+
+.align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.align2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*  * custom css ends */
+
+h1{
+    font-size: 60px;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+}
+.Contact_Section{
+    margin-top: 2rem;
+    border-top: 5px solid orangered;
+    border-bottom: 5px solid orangered;
+}
+.Contact_Section div{
+    margin: -2rem 7rem 1rem 7rem;
+    font-family: Cormorant Upright, serif;
+    font-size: 23px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+.Contact_Section section{
+    border: 3px solid black;
+    margin-bottom: 20px;
+    border-style: dotted;
+}
+.Contact_Section section div{
+    margin-top: 10px;
+    font-weight: bolder;
+    text-shadow: .1px .5px 1px black;
+}
+.Contact_Section section div:nth-child(1){
+    color: orangered;
+}
+.Contact_Section section div:nth-child(2){
+    color: yellow;
+}
+.Contact_Section section div:nth-child(3){
+    color: blueviolet;
+}
+
+.Contact_Section section{
+    margin-top: 30px;
+}
+
+.Contact_Section aside{
+    margin-top: 10px;
+    margin-bottom: 5em;
+}
+.Contact_Section aside a:nth-child(1){
+    color: green;
+}
+.Contact_Section aside a:nth-child(2){
+    color: blue;
+}
+.Contact_Section aside a:nth-child(3){
+    color: red;
+}
+.Contact_Section aside i:nth-child(4){
+    color: rgb(255, 50, 84);
+}
+
+.social-media{
+    margin: 0px 3rem;
+    font-size: 2rem;
+}
+@media screen and (max-width: 865px) {
+    .Contact_Section div {
+        margin: -2rem 2rem 1rem 2rem;
+    }
+}
+@media screen and (max-width: 504px) {
+    .social-media{
+        margin: 0px 1rem;
+        font-size: 2rem;
+    }
+    .Contact_Section section div{
+        /* margin-top: 1px; */
+        /* font-size: 13px;
+        font-weight: bolder;
+        text-shadow: .1px .5px 1px black;
+        border: none;
+        border-style:none ; */
+    }
+    .Contact_Section div{
+        font-size: 18px;
+        line-height: 37px;
+        font-weight: bolder;
+    }
+}
