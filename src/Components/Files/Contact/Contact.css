@@ -60,16 +60,16 @@ h1{
     margin-bottom: 5em;
 }
 .Contact_Section aside a:nth-child(1){
-    color: green;
+    color: #25D366;
 }
 .Contact_Section aside a:nth-child(2){
-    color: blue;
+    color: rgb(76, 171, 249);
 }
 .Contact_Section aside a:nth-child(3){
-    color: red;
+    color: rgb(255, 78, 78);
 }
 .Contact_Section aside i:nth-child(4){
-    color: rgb(255, 50, 84);
+    color: rgb(255, 0, 43);
 }
 
 .social-media{
@@ -85,14 +85,6 @@ h1{
     .social-media{
         margin: 0px 1rem;
         font-size: 2rem;
-    }
-    .Contact_Section section div{
-        /* margin-top: 1px; */
-        /* font-size: 13px;
-        font-weight: bolder;
-        text-shadow: .1px .5px 1px black;
-        border: none;
-        border-style:none ; */
     }
     .Contact_Section div{
         font-size: 18px;

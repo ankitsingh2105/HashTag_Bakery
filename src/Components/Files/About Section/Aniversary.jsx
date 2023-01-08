@@ -9,23 +9,88 @@ import image67 from './assets/cake67.jpeg'
 import image68 from './assets/cake68.jpeg'
 import image69 from './assets/cake69.jpeg'
 import Cake from './Cake'
+import { useContext } from "react"
+import { PdtList } from "../Cart/Cart"
+const pdtArray = [{
+    id: '32',
+    name: "Anniversary cake",
+    images: image60
+},
+{
+    id: '33',
+    name: "Anniversary cake",
+    images: image61
+},
+{
+    id: '134',
+    name: "Anniversary cake",
+    images: image62
+},
+{
+    id: '34',
+    name: "Anniversary cake",
+    images: image63
+},
+{
+    id: '35',
+    name: "Anniversary cake",
+    images: image64
+},
+{
+    id: '36',
+    name: "Anniversary cake",
+    images: image65
+},
+{
+    id: '37',
+    name: "Anniversary cake",
+    images: image66
+},
+{
+    id: '38',
+    name: "Anniversary cake",
+    images: image67
+},
+{
+    id: '39',
+    name: "Anniversary cake",
+    images: image68
+},
+{
+    id: '40',
+    name: "Anniversary cake",
+    images: image69
+},]
 export default function Anniversary(props) {
+    let list =[];
+    let data = useContext(PdtList);
+    let newList = localStorage.getItem("context");
+    if (newList !== null) {
+        list = JSON.parse(newList)
+    }
+    else {
+        list =data;
+    }
+    const newFunction = (name, images, cut) => {
+        let tobeset = { name, images, cut };
+        list.push(tobeset); console.log("new List -> ", list);
+        localStorage.setItem('context', JSON.stringify(list));
+    }
     const { title } = props;
     return (
         <>
             <main className='PDT_heading align' >
                 <h1>{title}</h1>
                 <div className="grid_system">
-                <Cake id='32' images={image60} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='33' images={image61} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='134' images={image62} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='34' images={image63} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='35' images={image64} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='36' images={image65} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='37' images={image66} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='38' images={image67} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='39' images={image68} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='40' images={image69} name="Anniversary Cake" bold="Rs 345" cut="Rs 634" />
+                    {
+                        pdtArray.map((e) => {
+                            const { name, images, id } = e;
+                            return (
+                                <Cake key={id} name={name} images={images} cut="232" bold="343"
+                                    Add_Products={() => newFunction(name, images, id)} />
+                            )
+                        })
+                    }
                 </div>
             </main>
         </>

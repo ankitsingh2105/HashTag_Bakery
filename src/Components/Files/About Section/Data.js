@@ -285,7 +285,7 @@ export const data = [
         images: image69
     },
 
-    // Surprise cake
+    // Same day cake
 
 
 

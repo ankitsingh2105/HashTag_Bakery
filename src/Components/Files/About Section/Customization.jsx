@@ -11,26 +11,106 @@ import image45 from './assets/cake54.jpeg'
 import image46 from './assets/cake55.jpeg'
 import image47 from './assets/cake57.jpeg'
 import Cake from "./Cake";
+import {PdtList} from "../Cart/Cart"
 import "./Product.css"
+import { useContext } from 'react'
+const pdtArray = [
+    {
+        id: '17',
+        name: "2 year Cake",
+        images: image21
+    },
+
+    {
+        id: '18',
+        name: "2 tire car",
+        images: image22
+    },
+
+    {
+        id: '19',
+        name: "Classic Cake",
+        images: image23
+    },
+
+    {
+        id: '20',
+        name: "Car Theme Cake",
+        images: image24
+    },
+
+    {
+        id: '21',
+        name: "Miss You Cake",
+        images: image25
+    },
+
+    {
+        id: '23',
+        name: "Miss you cake",
+        images: image26
+    },
+    {
+        id: '24',
+        name: "Black Forest cake",
+        images: image28
+    },
+    {
+        id: '25',
+        name: "Unicorn cake",
+        images: image29
+    },
+    {
+        id: '28',
+        name: "Jungle Theme cake",
+        images: image44
+    },
+    {
+        id: '29',
+        name: "Kids cake",
+        images: image45
+    },
+    {
+        id: '30',
+        name: "Forest cake",
+        images: image46
+    },
+    {
+        id: '31',
+        name: "Boy cake",
+        images: image47
+    },
+]
 export default function SameDay(props) {
     const { title } = props;
+    let list =[];
+    let data = useContext(PdtList);
+    let newList = localStorage.getItem("context");
+    if (newList !== null) {
+        list = JSON.parse(newList)
+    }
+    else {
+        list = data;
+    }
+    const newFunction =(name , images , id) =>{
+        let tobeset = {name , images , id};
+        list.push(tobeset); console.log("new List -> " , list);
+        localStorage.setItem('context', JSON.stringify(list));
+    }
     return (
         <>
             <main className='PDT_heading align' >
                 <h1>{title}</h1>
                 <div className="grid_system">
-                <Cake id='28' images={image44} name="Jungle Theme Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='29' images={image45} name="Kids Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='30' images={image46} name="Forest Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='31' images={image47} name="Bady boy cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='17' images={image21} name="2 year Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='18' images={image22} name="2 tire car Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='19' images={image23} name="Classic Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='20' images={image24} name="Car Theme Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='21' images={image25} name="Miss You Cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='23' images={image26} name="Miss you cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='24' images={image28} name="Black Forest cake" bold="Rs 345" cut="Rs 634" />
-                <Cake id='25' images={image29} name="Unicorn Cake" bold="Rs 345" cut="Rs 634" />
+                    {
+                        pdtArray.map((e) => {
+                            const { name, images , id } = e;
+                            return (
+                                <Cake key ={id} name={name} images={images} cut="232" bold="343"
+                                Add_Products={()=>newFunction(name , images , id)}  />
+                            )
+                        })
+                    }
                 </div>
             </main>
         </>

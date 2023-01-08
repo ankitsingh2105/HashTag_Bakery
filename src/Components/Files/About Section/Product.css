@@ -15,12 +15,6 @@
 
 /*  * custom css ends */
 
-.SecondPage {
-    /* background: rgb(212, 235, 255);
-    background: linear-gradient(180deg, rgba(212, 235, 255, 1) 8%, rgba(255, 255, 255, 1) 29%, rgba(231, 243, 252, 1) 51%, rgba(255, 255, 255, 1) 72%, rgba(195, 227, 255, 1) 94%);
-    margin-bottom: 10px; */
-}
-
 .productjsx h1 {
     font-size: 60px;
     color: orange;
@@ -73,13 +67,22 @@ strong {
     grid-template-columns: 18rem 18rem 18rem 18rem;
     margin-top: 50px;
 }
-
+/* TODO: floating button css  */
+.go{
+    position: fixed;
+    right: 3%;
+    bottom: 8%;
+    font-size: 30px;
+    border-radius: 54px;
+    padding: 10px 12px;
+    background-color: aqua;
+}
 
 /* todo:  */
 .unique {
-    margin-top: 5rem;
-    border: 1px solid orangered;
-    margin-left: 2px;
+    margin: 5rem 4px 0px 4px ;
+    border-radius: 3px;
+    box-shadow: -1px 3px 4px rgb(138, 136, 136);
 }
 
 .unique img {
@@ -109,6 +112,10 @@ strong {
 
 .pdt_name {
     margin-bottom: 30px;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 

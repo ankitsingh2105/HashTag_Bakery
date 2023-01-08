@@ -10,11 +10,21 @@ export default function About() {
     return (
         <>
             <div className="SecondPage">
+
+                {/* TODO : floating button */}
+                <div className="go">
+                    <Link to="/cart">
+                        <i style={{ "color": "black" }} className="fa-solid fa-cart-shopping" />
+                    </Link>
+                </div>
+
+                {/* Menu */}
                 <div className="align productjsx" >
                     <h1>Menu</h1>
                     <strong>Click on the image to see the list</strong>
                 </div>
-
+                
+                {/* links */}
                 <div className="align" >
                     <div className="container331" >
                         <div className="align">
