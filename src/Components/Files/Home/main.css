@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, rgb(230, 251, 250) 8%, rgb(255, 255, 255) 29%, rgb(227, 249, 245) 51%, rgb(255, 255, 255) 72%, rgb(212, 247, 245) 94%);
+    background-color: white;
 }
 
 /* todo: navbar section */
@@ -16,8 +16,8 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 200px;
-    border: 3px solid orangered;
-    border-style: dotted;
+    border: 3px solid rgb(255, 106, 52);
+    /* border-style: dotted; */
     z-index: 2;
     position: relative;
     box-shadow: 1px 1px 12px black;
