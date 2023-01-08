@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, rgba(230, 238, 251, 1) 8%, rgb(255, 255, 255) 29%, rgba(227, 235, 249, 1) 51%, rgb(255, 255, 255) 72%, rgb(212, 247, 245) 94%);
+    background: linear-gradient(135deg, rgb(230, 251, 250) 8%, rgb(255, 255, 255) 29%, rgb(227, 249, 245) 51%, rgb(255, 255, 255) 72%, rgb(212, 247, 245) 94%);
 }
 
 /* todo: navbar section */
