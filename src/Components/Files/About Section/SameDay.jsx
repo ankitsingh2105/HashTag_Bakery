@@ -65,7 +65,7 @@ export default function SameDay(props) {
     }
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        list.push(tobeset); console.log("new List from -> ", list);
+        list.push(tobeset);
         localStorage.setItem('context', JSON.stringify(list));
     }
     return (

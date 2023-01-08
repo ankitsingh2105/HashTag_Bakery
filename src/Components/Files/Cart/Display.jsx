@@ -1,9 +1,7 @@
-import React, { useContext } from 'react'
-import { PdtList } from './Cart'
+import React from 'react'
 import Card from "./Card"
 import "./Display.css"
 export default function Display(props) {
-    let list = useContext(PdtList);
     let newlist = [];
     let array = localStorage.getItem('context');
     if (array != null) {
@@ -12,29 +10,26 @@ export default function Display(props) {
     else {
         newlist = [];
     }
-    console.log("new list ->  ", newlist)
     const SendInfo = () => {
-        let message = `Hello there I have an order" + %0a`;
+        let whatsApp_Array = JSON.parse(localStorage.getItem("context"));
+        let message = 'Hello there! I have an order: %0a ';
         let index = 1;
-        list.forEach(e => {
-            message += `${index} + "  ->  " + ${e.name} + %0a`;
-            index++;
+        whatsApp_Array.forEach(e => {
+          message += `${index}. ${e.name} (id-${e.id}) %0a `;
+          index++;
         });
-        let Message = `"https://wa.me/919650988301?text=" + ${message}`;
+        let Message = `https://wa.me/919650988301?text=${message}`;
         window.open(Message, '_blank').focus();
     }
     const DeleteItem = (e) => {
-        console.log("this this shit -> ", e);
-        let newShit = [];
-        newlist.forEach((e1)=>{
-            if(e1.id !== e){
-                console.log("found shit -> " , e1.id);
-                newShit.push(e1);
+        let tempArray = [];
+        newlist.forEach((e1) => {
+            if (e1.id !== e) {
+                tempArray.push(e1);
             }
         })
-        newlist = newShit
-        console.log("bawa-> ",newShit);
-        localStorage.setItem('context' , JSON.stringify(newlist));
+        newlist = tempArray
+        localStorage.setItem('context', JSON.stringify(newlist));
     }
     return (
         <>
@@ -42,7 +37,7 @@ export default function Display(props) {
             {
                 newlist.map((e) => {
                     const { id } = e;
-                    return <Card key={id} id={id} DeleteItem={() => DeleteItem(id)}  {...e} />
+                    return <Card key={id} DeleteItem={() => DeleteItem(id)}  {...e} />
                 })
             }
             <div className="align buttonOrder" style={{ "marginTop": "60px" }} >

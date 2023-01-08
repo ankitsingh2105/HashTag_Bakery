@@ -71,9 +71,10 @@ export default function Anniversary(props) {
     else {
         list =data;
     }
-    const newFunction = (name, images, cut) => {
-        let tobeset = { name, images, cut };
-        list.push(tobeset); console.log("new List -> ", list);
+    console.log("anni list -> " , list);
+    const newFunction = (name, images, id) => {
+        let tobeset = { name, images, id };
+        list.push(tobeset);
         localStorage.setItem('context', JSON.stringify(list));
     }
     const { title } = props;

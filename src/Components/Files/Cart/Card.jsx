@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 export default function Card(props) {
-    const {DeleteItem } = props;
+    const { DeleteItem } = props;
     const [setstyle, setsetstyle] = useState({
         color: 'black',
         background: 'rgb(238, 242, 241)'
@@ -19,7 +19,7 @@ export default function Card(props) {
                     <h3>{name}</h3>
                 </div>
             </main>
-            <button onClick={() =>{ DeleteItem(id); SetState(id);}} >Delete</button>
+            <button onClick={() => { DeleteItem(id); SetState(id); }} >Delete</button>
         </div>
     )
 }
