@@ -52,7 +52,7 @@ export default function Anniversary(props) {
                         pdtArray.map((e) => {
                             const { name, images, id } = e;
                             return (
-                                <Cake key={id} name={name} images={images} cut="232" bold="343"
+                                <Cake key={id} name={name} images={images} cut="330" bold="250"
                                     Add_Products={() => newFunction(name, images, id)} />
                             )
                         })

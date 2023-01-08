@@ -10,8 +10,8 @@ export default function Home() {
                 </div>
                 <div className="items">
                     <li className="list list1">Home</li>
-                    <li className="list">Our Products</li>
-                    <li className="list">Contact</li>
+                    <li  className="list">Our Products</li>
+                    <li className="list"><a href="tel:9650988301">Contact</a></li>
                 </div>
                 <div className="logo2">
                     <img src={homeImage} className='mainImage2' alt="" />
