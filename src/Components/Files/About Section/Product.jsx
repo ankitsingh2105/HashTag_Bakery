@@ -14,7 +14,7 @@ export default function About() {
                 {/* TODO : floating button */}
                 <div className="go">
                     <Link to="/cart">
-                        <i style={{ "color": "black" }} className="fa-solid fa-cart-shopping" />
+                        🛒
                     </Link>
                 </div>
 

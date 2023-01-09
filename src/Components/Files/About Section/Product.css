@@ -30,6 +30,12 @@ strong {
     height: 100px;
     border-radius: 200px;
     border: 10px solid yellowgreen;
+    transition: all .2s ease;
+}
+
+.img12:hover {
+    transform: scale(1.1);
+    border: 6px solid yellowgreen;
 }
 
 .pdt_name {
@@ -40,12 +46,12 @@ strong {
     text-shadow: .1px .1px 1px black;
 }
 
-.container331,
-.container332 {
+.container331 {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 15rem 15rem 15rem;
 }
+
 
 .container332 {
     margin-top: 2rem;
@@ -67,20 +73,21 @@ strong {
     grid-template-columns: 18rem 18rem 18rem 18rem;
     margin-top: 50px;
 }
+
 /* TODO: floating button css  */
-.go{
+.go {
     position: fixed;
     right: 3%;
     bottom: 8%;
     font-size: 30px;
     border-radius: 54px;
-    padding: 10px 12px;
-    background-color: aqua;
+    padding: 12px 12px;
+    background-color: rgb(255, 76, 106);
 }
 
 /* todo:  */
 .unique {
-    margin: 5rem 4px 0px 4px ;
+    margin: 5rem 4px 0px 4px;
     border-radius: 3px;
     box-shadow: -1px 3px 4px rgb(138, 136, 136);
     background-color: #edeeee;
@@ -115,7 +122,7 @@ strong {
     margin-bottom: 30px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
@@ -191,41 +198,49 @@ button:hover{
         height: 150px;
         margin: 5px;
     }
+
     .grid_system {
         display: grid;
         grid-template-columns: 15rem 15rem;
         margin-top: 50px;
     }
-    .unique h1{
+
+    .unique h1 {
         font-size: 20px;
     }
 }
+
 @media screen and (max-width: 503px) {
     .grid_system {
         display: grid;
         grid-template-columns: 12rem 12rem;
         margin-top: 50px;
     }
+
     .container331,
     .container332 {
         margin-top: 30px;
         display: grid;
         grid-template-columns: 10rem 10rem;
     }
-    
+
 }
+
 @media screen and (max-width: 390px) {
     .grid_system {
         display: grid;
         grid-template-columns: 11rem 11rem;
         margin-top: 50px;
     }
+
     .PDT_heading h1 {
         font-size: 32px;
     }
-    .unique h1{
+
+    .unique h1 {
         font-size: 17px;
     }
+
     .bakery_name p {
         margin: 0px 14px;
     }

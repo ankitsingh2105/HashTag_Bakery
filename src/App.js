@@ -8,18 +8,11 @@ import Birthday from "./Components/Files/About Section/Birthday";
 import Display from "./Components/Files/Cart/Display";
 import { PdtList } from "./Components/Files/Cart/Cart";
 import Layout from "./Layout";
-import { Suspense } from "react";
-import SyncLoader from "react-spinners/SyncLoader";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   let list = [];
   return (
     <div className="App">
-       <Suspense className='App' fallback={
-        <div className='align'>
-          <SyncLoader size={'20px'} color='#FF5757' className='loader App' />
-        </div>
-      }>
       <BrowserRouter>
         <PdtList.Provider value={list} >
           <Routes>
@@ -35,7 +28,6 @@ function App() {
         </PdtList.Provider>
         <Contact />
       </BrowserRouter>
-      </Suspense>
     </div>
   );
 }

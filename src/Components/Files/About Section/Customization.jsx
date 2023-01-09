@@ -11,9 +11,9 @@ import image45 from './assets/cake54.jpeg'
 import image46 from './assets/cake55.jpeg'
 import image47 from './assets/cake57.jpeg'
 import Cake from "./Cake";
-import {PdtList} from "../Cart/Cart"
+import { PdtList } from "../Cart/Cart"
 import "./Product.css"
-import { useContext  , useState , useEffect } from 'react'
+import { useContext, useState, useEffect } from 'react'
 const pdtArray = [
     {
         id: '17',
@@ -86,16 +86,16 @@ export default function SameDay(props) {
     const { title } = props;
     const [list, setlist] = useState([]);
     const newList = localStorage.getItem("context");
-    useEffect(()=>{
+    useEffect(() => {
         setlist(newList !== null ? JSON.parse(newList) : data)
-    },[])
+    }, [])
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        setlist([...list , tobeset]);
+        setlist([...list, tobeset]);
     }
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem('context', JSON.stringify(list));
-    },[list])
+    }, [list])
     return (
         <>
             <main className='PDT_heading align' >
@@ -103,10 +103,10 @@ export default function SameDay(props) {
                 <div className="grid_system">
                     {
                         pdtArray.map((e) => {
-                            const { name, images , id } = e;
+                            const { name, images, id } = e;
                             return (
-                                <Cake key ={id} name={name} images={images} cut="330" bold="250"
-                                Add_Products={()=>newFunction(name , images , id)}  />
+                                <Cake key={id} name={name} images={images} cut="330" bold="250"
+                                    Add_Products={() => newFunction(name, images, id)} />
                             )
                         })
                     }
