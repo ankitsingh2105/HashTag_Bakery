@@ -247,6 +247,10 @@ main img {
         position: relative;
         top: 30px;
         box-shadow: 1px 1px 12px black;
+        transition: transform .7s;
+    }
+    .mainImage2:hover {
+        transform: rotate(360deg);
     }
 
     .items li {
