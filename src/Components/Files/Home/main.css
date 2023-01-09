@@ -238,7 +238,6 @@ main img {
         height: 100px;
         border-radius: 200px;
         border: 3px solid orangered;
-        border-style: dotted;
         z-index: 2;
         position: relative;
         top: 30px;

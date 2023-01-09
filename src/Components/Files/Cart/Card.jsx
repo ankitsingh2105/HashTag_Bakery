@@ -5,7 +5,7 @@ export default function Card(props) {
         color: 'black',
         background: 'rgb(238, 242, 241)'
     })
-    const SetState = (e) => {
+    const SetState = () => {
         setsetstyle({
             display: 'none'
         })
@@ -19,7 +19,7 @@ export default function Card(props) {
                     <h3>{name}</h3>
                 </div>
             </main>
-            <button onClick={() => { DeleteItem(id); SetState(id); }} >Delete</button>
+            <button onClick={() => { DeleteItem(id); SetState(); }} >Delete</button>
         </div>
     )
 }

@@ -7,7 +7,7 @@ import flower15 from './assets/flower15.jpeg'
 import flower17 from './assets/flower16.jpeg'
 import flower18 from './assets/flower18.jpeg'
 import Cake from "./Cake";
-import { useContext } from "react"
+import { useContext , useState ,useEffect } from "react"
 import { PdtList } from "../Cart/Cart"
 const pdtArray = [
     {
@@ -47,21 +47,20 @@ const pdtArray = [
     },
 ]
 export default function Flower(props) {
+    const data = useContext(PdtList);
     const { title } = props;
-    let list =[];
-    let data = useContext(PdtList);
-    let newList = localStorage.getItem("context");
-    if (newList !== null) {
-        list = JSON.parse(newList)
+    const [list, setlist] = useState([]);
+    const newList = localStorage.getItem("context");
+    useEffect(()=>{
+        setlist(newList !== null ? JSON.parse(newList) : data)
+    },[])
+    const newFunction = (name, images, id) => {
+        let tobeset = { name, images, id };
+        setlist([...list , tobeset]);
     }
-    else {
-        list = data;
-    }
-    const newFunction =(name , images , id) =>{
-        let tobeset = {name , images , id};
-        list.push(tobeset);
+    useEffect(()=>{
         localStorage.setItem('context', JSON.stringify(list));
-    }
+    },[list])
     return (
         <>
             <main className='PDT_heading align' >

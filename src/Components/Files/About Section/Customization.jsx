@@ -13,7 +13,7 @@ import image47 from './assets/cake57.jpeg'
 import Cake from "./Cake";
 import {PdtList} from "../Cart/Cart"
 import "./Product.css"
-import { useContext } from 'react'
+import { useContext  , useState , useEffect } from 'react'
 const pdtArray = [
     {
         id: '17',
@@ -82,21 +82,20 @@ const pdtArray = [
     },
 ]
 export default function SameDay(props) {
+    const data = useContext(PdtList);
     const { title } = props;
-    let list =[];
-    let data = useContext(PdtList);
-    let newList = localStorage.getItem("context");
-    if (newList !== null) {
-        list = JSON.parse(newList)
+    const [list, setlist] = useState([]);
+    const newList = localStorage.getItem("context");
+    useEffect(()=>{
+        setlist(newList !== null ? JSON.parse(newList) : data)
+    },[])
+    const newFunction = (name, images, id) => {
+        let tobeset = { name, images, id };
+        setlist([...list , tobeset]);
     }
-    else {
-        list = data;
-    }
-    const newFunction =(name , images , id) =>{
-        let tobeset = {name , images , id};
-        list.push(tobeset);
+    useEffect(()=>{
         localStorage.setItem('context', JSON.stringify(list));
-    }
+    },[list])
     return (
         <>
             <main className='PDT_heading align' >

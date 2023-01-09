@@ -3,7 +3,7 @@ import image81 from './assets/cake81.jpeg'
 import image82 from './assets/cake82.jpeg'
 import image83 from './assets/cake83.jpeg'
 import Cake from './Cake'
-import { useContext } from "react"
+import { useContext , useState , useEffect } from "react"
 import { PdtList } from "../Cart/Cart"
 const pdtArray = [
     {
@@ -28,21 +28,20 @@ const pdtArray = [
     },
 ]
 export default function Anniversary(props) {
+    const data = useContext(PdtList);
     const { title } = props;
-    let list =[];
-    let data = useContext(PdtList);
-    let newList = localStorage.getItem("context");
-    if (newList !== null) {
-        list = JSON.parse(newList)
-    }
-    else {
-        list = data;
-    }
+    const [list, setlist] = useState([]);
+    const newList = localStorage.getItem("context");
+    useEffect(()=>{
+        setlist(newList !== null ? JSON.parse(newList) : data)
+    },[])
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        list.push(tobeset);
-        localStorage.setItem('context', JSON.stringify(list));
+        setlist([...list , tobeset]);
     }
+    useEffect(()=>{
+        localStorage.setItem('context', JSON.stringify(list));
+    },[list])
     return (
         <>
             <main className='PDT_heading align' >

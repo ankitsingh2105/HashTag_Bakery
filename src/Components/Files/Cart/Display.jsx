@@ -1,22 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from "./Card"
 import "./Display.css"
 export default function Display(props) {
-    let newlist = [];
-    let array = localStorage.getItem('context');
-    if (array != null) {
-        newlist = JSON.parse(array);
-    }
-    else {
-        newlist = [];
-    }
+    const [newlist, setnewlist] = useState([])
+    const array = localStorage.getItem('context');
+    useEffect(() => {
+        setnewlist(newlist !== null ? JSON.parse(array) : []);
+    },[])
     const SendInfo = () => {
         let whatsApp_Array = JSON.parse(localStorage.getItem("context"));
         let message = 'Hello there! I have an order: %0a ';
         let index = 1;
         whatsApp_Array.forEach(e => {
-          message += `${index}. ${e.name} (id-${e.id}) %0a `;
-          index++;
+            message += `${index}. ${e.name} (id-${e.id}) %0a `;
+            index++;
         });
         let Message = `https://wa.me/919650988301?text=${message}`;
         window.open(Message, '_blank').focus();
@@ -28,9 +25,11 @@ export default function Display(props) {
                 tempArray.push(e1);
             }
         })
-        newlist = tempArray
-        localStorage.setItem('context', JSON.stringify(newlist));
+        setnewlist(tempArray);
     }
+    useEffect(() => {
+        localStorage.setItem('context', JSON.stringify(newlist));
+    }, [newlist])
     return (
         <>
             <h4 className='align'>Thanks for visiting</h4>

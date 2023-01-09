@@ -8,7 +8,7 @@ import image77 from './assets/cake77.jpeg'
 import image78 from './assets/cake78.jpeg'
 import image79 from './assets/cake79.jpeg'
 import Cake from './Cake'
-import { useContext } from "react"
+import { useContext , useEffect, useState } from "react"
 const pdtArray = [{
     id: '41',
     name: "Golden cake",
@@ -50,21 +50,21 @@ const pdtArray = [{
     images: image79
 },]
 export default function Surprise(props) {
+    const data = useContext(PdtList);
     const { title } = props;
-    let list =[];
-    let data = useContext(PdtList);
-    let newList = localStorage.getItem("context");
-    if (newList !== null) {
-        list = JSON.parse(newList)
-    }
-    else {
-        list = data;
-    }
+    const [list, setlist] = useState([]);
+    const newList = localStorage.getItem("context");
+    useEffect(()=>{
+        setlist(newList !== null ? JSON.parse(newList) : data);
+        console.log("building one");
+    },[])
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        list.push(tobeset);
-        localStorage.setItem('context', JSON.stringify(list));
+        setlist([...list , tobeset]);
     }
+    useEffect(()=>{
+        localStorage.setItem('context', JSON.stringify(list));
+    },[list])
     return (
         <>
             <main className='PDT_heading align' >
