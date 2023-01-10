@@ -40,7 +40,8 @@ export default function Anniversary(props) {
         setlist([...list , tobeset]);
     }
     useEffect(()=>{
-        localStorage.setItem('context', JSON.stringify(list));
+        let uniqueList = [...new Set(list.map(item => item.id))].map(id => list.find(item => item.id === id));
+        localStorage.setItem('context', JSON.stringify(uniqueList));
     },[list])
     return (
         <>
