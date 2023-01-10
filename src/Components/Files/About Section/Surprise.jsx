@@ -56,7 +56,6 @@ export default function Surprise(props) {
     const newList = localStorage.getItem("context");
     useEffect(()=>{
         setlist(newList !== null ? JSON.parse(newList) : data);
-        console.log("building one");
     },[])
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
