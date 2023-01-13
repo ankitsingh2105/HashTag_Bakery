@@ -71,7 +71,7 @@ export default function Flower(props) {
                         pdtArray.map((e) => {
                             const { name, images, id } = e;
                             return (
-                                <Cake key={id} name={name} images={images} cut="330" bold="250"
+                                <Cake key={id} name={name} images={images} cut="470" bold="370"
                                 Add_Products={()=>newFunction(name , images , id)}  />
                             )
                         })
