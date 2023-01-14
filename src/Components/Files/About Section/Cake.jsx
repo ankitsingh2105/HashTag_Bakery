@@ -11,12 +11,16 @@ export default function Cake(props) {
     state.current.disabled = true;
   }
   const { itemNumber, setitemNumber } = useContext(Number)
-  let jsonArray = JSON.parse(localStorage.getItem("context"));
   const Increment = () => {
+    let jsonArray = JSON.parse(localStorage.getItem("context"));
     setitemNumber(jsonArray.length + 1)
   }
+  const Increment2 = () => {
+    let jsonArray = JSON.parse(localStorage.getItem("context"));
+   setitemNumber(jsonArray ? jsonArray.length : 0);
+  }
   useEffect(() => {
-    setitemNumber(jsonArray ? jsonArray.length : 0);
+    Increment2();
   }, [])
   return (
     <>
