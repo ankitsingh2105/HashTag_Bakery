@@ -62,13 +62,8 @@ const pdtArray = [{
     images: image69
 },]
 export default function Anniversary(props) {
-    const data = useContext(PdtList);
     const { title } = props;
-    const [list, setlist] = useState([]);
-    const newList = localStorage.getItem("context");
-    useEffect(()=>{
-        setlist(newList !== null ? JSON.parse(newList) : data)
-    },[])
+    const {list, setlist} = useContext(PdtList);
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
         setlist([...list , tobeset]);

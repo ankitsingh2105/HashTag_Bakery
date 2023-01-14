@@ -82,21 +82,16 @@ const pdtArray = [
     },
 ]
 export default function SameDay(props) {
-    const data = useContext(PdtList);
     const { title } = props;
-    const [list, setlist] = useState([]);
-    const newList = localStorage.getItem("context");
-    useEffect(() => {
-        setlist(newList !== null ? JSON.parse(newList) : data)
-    }, [])
+    const {list, setlist} = useContext(PdtList);
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        setlist([...list, tobeset]);
-    }
-    useEffect(() => {
+        setlist([...list , tobeset]);
+    }  
+    useEffect(()=>{
         let uniqueList = [...new Set(list.map(item => item.id))].map(id => list.find(item => item.id === id));
         localStorage.setItem('context', JSON.stringify(uniqueList));
-    }, [list])
+    },[list])
     return (
         <>
             <main className='PDT_heading align' >

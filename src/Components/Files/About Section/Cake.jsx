@@ -1,6 +1,8 @@
-import { useRef } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
+import { Number } from "../Cart/Cart"
+import "./Product.css"
 export default function Cake(props) {
-  const { name, images, bold, cut, Add_Products , id } = props;
+  const { name, images, bold, cut, Add_Products, id } = props;
   const state = useRef(null);
   const ButtonState = () => {
     state.current.innerHTML = "Added to Cart"
@@ -8,8 +10,19 @@ export default function Cake(props) {
     state.current.style.color = "white";
     state.current.disabled = true;
   }
+  const { itemNumber, setitemNumber } = useContext(Number)
+  let jsonArray = JSON.parse(localStorage.getItem("context"));
+  const Increment = () => {
+    setitemNumber(jsonArray.length + 1)
+  }
+  useEffect(() => {
+    setitemNumber(jsonArray ? jsonArray.length : 0);
+  }, [])
   return (
     <>
+      <div className="floatingNumbers">
+        {itemNumber}
+      </div>
       <main className="align unique">
         <img src={images} alt="" />
         <h1>{name}</h1>
@@ -20,7 +33,7 @@ export default function Cake(props) {
             Rs {cut}
           </small>
         </div>
-        <button ref={state} onClick={() => { Add_Products(name, images, id); ButtonState(); }} style={{ margin: "10px 0px" }}>
+        <button ref={state} onClick={() => { Add_Products(name, images, id); ButtonState(); Increment() }} style={{ margin: "10px 0px" }}>
           Add to Cart
         </button>
       </main>

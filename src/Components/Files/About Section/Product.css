@@ -127,6 +127,15 @@ button:hover {
 }
 
 
+/* todo : floating number */
+.floatingNumbers {
+    position: fixed;
+    right: 3%;
+    bottom: 12%;
+    font-size: 30px;
+    color: black;
+}
+
 
 /* todo  : media queries */
 
