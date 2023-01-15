@@ -1,4 +1,4 @@
-import { useRef, useContext, useState, useEffect } from "react";
+import { useRef, useContext , useEffect } from "react";
 import { Number } from "../Cart/Cart"
 import "./Product.css"
 export default function Cake(props) {
@@ -17,11 +17,11 @@ export default function Cake(props) {
   }
   const Increment2 = () => {
     let jsonArray = JSON.parse(localStorage.getItem("context"));
-   setitemNumber(jsonArray ? jsonArray.length : 0);
+    setitemNumber(jsonArray ? jsonArray.length : 0);
   }
   useEffect(() => {
     Increment2();
-  }, [])
+  },[])
   return (
     <>
       <div className="floatingNumbers">

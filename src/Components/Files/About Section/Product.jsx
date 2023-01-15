@@ -23,7 +23,7 @@ export default function About() {
                     <h1>Menu</h1>
                     <strong>Click on the image to see the list</strong>
                 </div>
-                
+
                 {/* links */}
                 <div className="align" >
                     <div className="container331" >

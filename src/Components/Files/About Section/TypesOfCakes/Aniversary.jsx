@@ -8,9 +8,7 @@ import image66 from './assets/cake66.jpeg'
 import image67 from './assets/cake67.jpeg'
 import image68 from './assets/cake68.jpeg'
 import image69 from './assets/cake69.jpeg'
-import Cake from './Cake'
-import { useContext  , useState , useEffect } from "react"
-import { PdtList } from "../Cart/Cart"
+import CakeCard from '../CakeCard'
 const pdtArray = [{
     id: '32',
     name: "Anniversary cake",
@@ -62,32 +60,9 @@ const pdtArray = [{
     images: image69
 },]
 export default function Anniversary(props) {
-    const { title } = props;
-    const {list, setlist} = useContext(PdtList);
-    const newFunction = (name, images, id) => {
-        let tobeset = { name, images, id };
-        setlist([...list , tobeset]);
-    }  
-    useEffect(()=>{
-        let uniqueList = [...new Set(list.map(item => item.id))].map(id => list.find(item => item.id === id));
-        localStorage.setItem('context', JSON.stringify(uniqueList));
-    },[list])
-    return (
+    return(
         <>
-            <main className='PDT_heading align' >
-                <h1>{title}</h1>
-                <div className="grid_system">
-                    {
-                        pdtArray.map((e) => {
-                            const { name, images, id } = e;
-                            return (
-                                <Cake key={id} name={name} images={images} cut="470" bold="370"
-                                    Add_Products={() => newFunction(name, images, id)} />
-                            )
-                        })
-                    }
-                </div>
-            </main>
+            <CakeCard pdtArray={pdtArray}  />
         </>
     )
 }

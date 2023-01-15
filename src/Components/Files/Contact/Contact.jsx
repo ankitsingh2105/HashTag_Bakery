@@ -17,20 +17,20 @@ export default function Contact() {
                         <i class=" social-media fa-solid fa-envelope newletter"></i>
                     </a>
                     <i class=" social-media fa-brands fa-instagram"></i>
-            </aside>
-            <div>
-                We appreciate you taking the time to visit our website.
-                Our goal is to provide the best possible products
-                to our customers, and we value your feedback. If you have
-                any questions, comments, or concerns, please don't hesitate to
-                reach out to us.
-            </div>
-            <section className="align">
-                <div className="secondDivs">Shiv Shakti Apartment Gate 2, Sector -71, Noida, Uttar Pradesh, 201301</div>
-                <div className="secondDivs">hashtagbakerynoida@gmail.com</div>
-                <div className="secondDivs">9650988301</div>
-            </section>
-        </main>
+                </aside>
+                <div>
+                    We appreciate you taking the time to visit our website.
+                    Our goal is to provide the best possible products
+                    to our customers, and we value your feedback. If you have
+                    any questions, comments, or concerns, please don't hesitate to
+                    reach out to us.
+                </div>
+                <section className="align">
+                    <div className="secondDivs">Shiv Shakti Apartment Gate 2, Sector -71, Noida, Uttar Pradesh, 201301</div>
+                    <div className="secondDivs">hashtagbakerynoida@gmail.com</div>
+                    <div className="secondDivs">9650988301</div>
+                </section>
+            </main>
         </>
     )
 }

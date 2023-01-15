@@ -1,10 +1,10 @@
 import Contact from "./Components/Files/Contact/Contact"
-import SameDay from "./Components/Files/About Section/SameDay";
-import Customization from "./Components/Files/About Section/Customization";
-import Flowers from "./Components/Files/About Section/Flowers";
-import Anniversary from "./Components/Files/About Section/Aniversary";
-import Surprise from "./Components/Files/About Section/Surprise";
-import Birthday from "./Components/Files/About Section/Birthday";
+import SameDay from "./Components/Files/About Section/TypesOfCakes/SameDay";
+import Customization from "./Components/Files/About Section/TypesOfCakes/Customization";
+import Flowers from "./Components/Files/About Section/TypesOfCakes/Flowers";
+import Anniversary from "./Components/Files/About Section/TypesOfCakes/Aniversary";
+import Surprise from "./Components/Files/About Section/TypesOfCakes/Surprise";
+import Birthday from "./Components/Files/About Section/TypesOfCakes/Birthday";
 import Display from "./Components/Files/Cart/Display";
 import { PdtList, Number } from "./Components/Files/Cart/Cart";
 import Layout from "./Layout";

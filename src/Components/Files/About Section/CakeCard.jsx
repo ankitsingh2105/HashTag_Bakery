@@ -1,43 +1,18 @@
-import image80 from './assets/cake80.jpeg'
-import image81 from './assets/cake81.jpeg'
-import image82 from './assets/cake82.jpeg'
-import image83 from './assets/cake83.jpeg'
-import Cake from './Cake'
-import { useContext , useState , useEffect } from "react"
+import React from 'react'
 import { PdtList } from "../Cart/Cart"
-const pdtArray = [
-    {
-        id: '52',
-        name: "Doll cake",
-        images: image80
-    },
-    {
-        id: '53',
-        name: "Mixed Platte cake",
-        images: image81
-    },
-    {
-        id: '54',
-        name: "Pinata cake",
-        images: image82
-    },
-    {
-        id: '55',
-        name: "Bomb cake",
-        images: image83
-    },
-]
-export default function Anniversary(props) {
-    const { title } = props;
-    const {list, setlist} = useContext(PdtList);
+import Cake from './Cake';
+import { useContext, useEffect } from "react"
+export default function CakeCard(props) {
+    const { title, pdtArray } = props;
+    const { list, setlist } = useContext(PdtList);
     const newFunction = (name, images, id) => {
         let tobeset = { name, images, id };
-        setlist([...list , tobeset]);
-    }  
-    useEffect(()=>{
+        setlist([...list, tobeset]);
+    }
+    useEffect(() => {
         let uniqueList = [...new Set(list.map(item => item.id))].map(id => list.find(item => item.id === id));
         localStorage.setItem('context', JSON.stringify(uniqueList));
-    },[list])
+    }, [list])
     return (
         <>
             <main className='PDT_heading align' >
