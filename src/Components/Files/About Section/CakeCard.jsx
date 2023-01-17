@@ -6,8 +6,7 @@ export default function CakeCard(props) {
     const { title, pdtArray } = props;
     const { list, setlist } = useContext(PdtList);
     const newFunction = (name, images, id) => {
-        let tobeset = { name, images, id };
-        setlist([...list, tobeset]);
+        setlist([...list, { name, images, id }]);
     }
     useEffect(() => {
         let uniqueList = [...new Set(list.map(item => item.id))].map(id => list.find(item => item.id === id));

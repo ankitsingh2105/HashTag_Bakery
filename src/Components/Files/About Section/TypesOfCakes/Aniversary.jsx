@@ -62,7 +62,7 @@ const pdtArray = [{
 export default function Anniversary(props) {
     return(
         <>
-            <CakeCard pdtArray={pdtArray}  />
+            <CakeCard pdtArray={pdtArray} title="Anniversary Cakes"  />
         </>
     )
 }

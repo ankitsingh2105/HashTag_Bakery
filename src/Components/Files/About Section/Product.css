@@ -26,8 +26,8 @@ strong {
 }
 
 .img12 {
-    width: 100px;
-    height: 100px;
+    width: 84px;
+    height: 84px;
     border-radius: 200px;
     border: 10px solid yellowgreen;
     transition: all .2s ease;
@@ -39,7 +39,7 @@ strong {
 }
 
 .pdt_name {
-    font-size: 23px;
+    font-size: 21px;
     margin-top: 10px;
     color: rgb(255, 76, 106);
     font-weight: bolder;
@@ -91,6 +91,8 @@ strong {
     border-radius: 3px;
     box-shadow: -1px 3px 4px rgb(138, 136, 136);
     background-color: #edeeee;
+    width: 260px;
+    height: 350px;
 }
 
 .unique img {
@@ -187,8 +189,8 @@ button:hover {
     }
 
     .unique img {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
         margin: 5px;
     }
 
@@ -202,15 +204,20 @@ button:hover {
 }
 
 @media screen and (max-width: 595px) {
+    .unique{
+        height: 340px;
+        width: 236px;
+    }
+
     .unique img {
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
         margin: 5px;
     }
 
     .grid_system {
         display: grid;
-        grid-template-columns: 15rem 15rem;
+        grid-template-columns: 15.5rem 15rem;
         margin-top: 50px;
     }
 
@@ -233,12 +240,23 @@ button:hover {
         grid-template-columns: 10rem 10rem;
     }
 
+    .unique{
+        height: 280px;
+        width: 180px;
+    }
+
+    .unique img {
+        width: 170px;
+        height: 170px;
+        margin: 5px;
+    }
+
 }
 
 @media screen and (max-width: 390px) {
     .grid_system {
         display: grid;
-        grid-template-columns: 11rem 11rem;
+        grid-template-columns: 12rem 11rem;
         margin-top: 50px;
     }
 
@@ -252,5 +270,14 @@ button:hover {
 
     .bakery_name p {
         margin: 0px 14px;
+    }
+    .unique{
+        height: 270px;
+        width: 170px;
+    }
+    .unique img {
+        width: 160px;
+        height: 160px;
+        margin: 5px;
     }
 }

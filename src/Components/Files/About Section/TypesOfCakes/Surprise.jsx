@@ -50,7 +50,7 @@ const pdtArray = [{
 export default function Surprise(props) {
     return(
         <>
-            <CakeCard pdtArray={pdtArray}  />
+            <CakeCard pdtArray={pdtArray} title="Surprise Cakes"  />
         </>
     )
 }

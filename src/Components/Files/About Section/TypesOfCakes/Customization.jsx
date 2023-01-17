@@ -81,7 +81,7 @@ const pdtArray = [
 export default function SameDay(props) {
     return(
         <>
-            <CakeCard pdtArray={pdtArray}  />
+            <CakeCard pdtArray={pdtArray} title="Customization Cakes" />
         </>
     )
 }

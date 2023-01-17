@@ -28,7 +28,7 @@ export default function Cake(props) {
         {itemNumber}
       </div>
       <main className="align unique">
-        <img src={images} alt="" />
+        <img loading="lazy" src={images} alt="" />
         <h1>{name}</h1>
         <div className="align2">
           <small>Rs {bold}</small>

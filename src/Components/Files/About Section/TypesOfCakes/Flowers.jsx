@@ -46,7 +46,7 @@ const pdtArray = [
 export default function Flower(props) {
     return (
         <>
-            <CakeCard pdtArray={pdtArray} />
+            <CakeCard title="Flowers" pdtArray={pdtArray} />
         </>
     )
 }
