@@ -1,6 +1,8 @@
 import { useRef, useContext , useEffect } from "react";
 import { Number } from "../Cart/Cart"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Product.css"
+import temp from "./TypesOfCakes/assets/temp.jpg"
 export default function Cake(props) {
   const { name, images, bold, cut, Add_Products, id } = props;
   const state = useRef(null);
@@ -28,7 +30,7 @@ export default function Cake(props) {
         {itemNumber}
       </div>
       <main className="align unique">
-        <img loading="lazy" src={images} alt="" />
+        <LazyLoadImage effect="blur" placeholderSrc={temp} src={images} alt="" />
         <h1>{name}</h1>
         <div className="align2">
           <small>Rs {bold}</small>
