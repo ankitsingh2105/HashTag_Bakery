@@ -9,11 +9,11 @@ const Contact = lazy(() => import("./Components/Files/Contact/Contact"))
 export default function Layout(props) {
     return (
         <>
-            <Suspense fallback={<div className='align' style={{ margin: "250px 0px" }} >
+            <Suspense fallback={<div className='align33' style={{ margin: "250px 0px" }} >
                 <PacmanLoader size={'40px'} color='orangered' className='' /></div>}>
                 <Home />
                 <Products />
-                <Suspense fallback={<div className='align' style={{ margin: "100px 0px" }} >
+                <Suspense fallback={<div className='align33' style={{ margin: "100px 0px" }} >
                     <SyncLoader size={'20px'} color='orange' className='loader App' /></div>}>
                     {props.children}
                 </Suspense>
