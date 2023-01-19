@@ -1,19 +1,24 @@
-import React from 'react'
-import Home from "./Components/Files/Home/Home";
-import Products from "./Components/Files/About Section/Product";
+import React, { lazy } from 'react'
 import { Suspense } from "react";
+import "./index.css"
 import SyncLoader from "react-spinners/SyncLoader";
-import Contact from "./Components/Files/Contact/Contact"
+import PacmanLoader from "react-spinners/PacmanLoader";
+const Home = lazy(() => import("./Components/Files/Home/Home"));
+const Products = lazy(() => import("./Components/Files/About Section/Product"));
+const Contact = lazy(() => import("./Components/Files/Contact/Contact"))
 export default function Layout(props) {
     return (
         <>
-            <Home />
-            <Products />
-            <Suspense className='App' fallback={<div className='align' style={{margin : "100px 0px"}} >
-                <SyncLoader size={'20px'} color='#FF5757' className='loader App' /></div>}>
-                {props.children}
+            <Suspense fallback={<div className='align' style={{ margin: "250px 0px" }} >
+                <PacmanLoader size={'40px'} color='orangered' className='' /></div>}>
+                <Home />
+                <Products />
+                <Suspense fallback={<div className='align' style={{ margin: "100px 0px" }} >
+                    <SyncLoader size={'20px'} color='orange' className='loader App' /></div>}>
+                    {props.children}
+                </Suspense>
+                <Contact />
             </Suspense>
-            <Contact />
         </>
     )
 }
