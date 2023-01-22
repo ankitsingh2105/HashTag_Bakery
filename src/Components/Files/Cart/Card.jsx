@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Display.css"
 export default function Card(props) {
     const { DeleteItem } = props;
     const [setstyle, setsetstyle] = useState({
@@ -12,7 +13,7 @@ export default function Card(props) {
     }
     const { id, images, name } = props;
     return (
-        <div id={id} className='align displaySet' style={setstyle} >
+        <div id={id} className='align4 displaySet' style={setstyle} >
             <main>
                 <div className="border align">
                     <img src={images} alt="" />
