@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    ;
 }
 
 h4 {
@@ -83,21 +82,25 @@ main {
         margin: 2px 20rem;
     }
 }
+
 @media screen and (max-width: 957px) {
     .displaySet {
         margin: 2px 15rem;
     }
 }
+
 @media screen and (max-width: 762px) {
     .displaySet {
         margin: 2px 10rem;
     }
 }
+
 @media screen and (max-width: 595px) {
     .displaySet {
         margin: 2px 5rem;
     }
 }
+
 @media screen and (max-width: 408px) {
     .displaySet {
         margin: 2px 3rem;

@@ -31,14 +31,14 @@ export default function Display() {
     }, [newList])
     return (
         <>
-            <h4 className='align'>Thanks for visiting</h4>
+            <h4 className='align4'>Thanks for visiting</h4>
             {
                 newList.map((e) => {
                     const { id } = e;
                     return <Card key={id} DeleteItem={() => DeleteItem(id)}  {...e} />
                 })
             }
-            <div className="align buttonOrder" style={{ "marginTop": "60px" }} >
+            <div className="align4 buttonOrder" style={{ "marginTop": "60px" }} >
                 <button style={{ "fontSize": "20px" }} onClick={SendInfo}>Order Now</button>
             </div>
         </>
