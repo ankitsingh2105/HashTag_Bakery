@@ -142,9 +142,10 @@ main img {
 }
 
 .bakery_name p {
-        font-size: 19px;
-        font-weight: 500;
-        line-height: 30px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: justify;
 }
 
 .bakery_name button {
@@ -247,6 +248,7 @@ main img {
         box-shadow: 1px 1px 12px black;
         transition: transform .7s;
     }
+
     .mainImage2:hover {
         transform: rotate(360deg);
     }
