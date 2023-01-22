@@ -15,7 +15,7 @@ export default function Card(props) {
     return (
         <div id={id} className='align4 displaySet' style={setstyle} >
             <main>
-                <div className="border align">
+                <div className="border alig4">
                     <img src={images} alt="" />
                     <h3>{name}</h3>
                 </div>
