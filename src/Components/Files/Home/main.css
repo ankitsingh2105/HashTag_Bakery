@@ -142,11 +142,9 @@ main img {
 }
 
 .bakery_name p {
-    line-height: 30px;
-    letter-spacing: 2px;
-    font-weight: bolder;
-    font-family: Cormorant Upright, serif;
-    font-size: 21px;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 38px;
 }
 
 .bakery_name button {
