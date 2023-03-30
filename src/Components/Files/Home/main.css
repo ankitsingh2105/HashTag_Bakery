@@ -1,5 +1,9 @@
 body {
     background-color: white;
+    background-image: radial-gradient(#fad8d8 20%, transparent 20%);
+    z-index: -111;
+    background-position: 0 0, 50px 50px;
+    background-size: 40px 40px;
 }
 
 /* todo: navbar section */
@@ -76,6 +80,11 @@ main {
 
 .firstPage {
     border-bottom: 5px solid orangered;
+    background-image: radial-gradient(#ffb9b9 20%, transparent 20%);
+    z-index: -111;
+    background-position: 0 0, 50px 50px;
+    background-size: 40px 40px;
+    background-color: rgb(255, 199, 199);
 }
 
 main small {
@@ -96,14 +105,15 @@ main img {
     margin-bottom: -60px;
     margin-top: -30px;
     font-weight: bolder;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: .7px .1px .1px rgb(133, 58, 58);
 }
 
 .name2 {
     color: orangered;
     font-size: 8rem;
     font-weight: bolder;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: .7px .1px .1px rgb(133, 58, 58);
+
 }
 
 .image {
@@ -146,6 +156,7 @@ main img {
     font-weight: 500;
     line-height: 30px;
     text-align: justify;
+    color: #6d0808;
 }
 
 .bakery_name button {

@@ -21,7 +21,7 @@ export default function CakeCard(props) {
                         pdtArray.map((e) => {
                             const { name, images, id } = e;
                             return (
-                                <Cake key={id} name={name} images={images} cut="470" bold="370"
+                                <Cake key={id} name={name} images={images} cut="670" bold="570"
                                     Add_Products={() => newFunction(name, images, id)} />
                             )
                         })

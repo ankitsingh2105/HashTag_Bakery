@@ -16,12 +16,17 @@
 h1{
     font-size: 60px;
     color: orange;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: .7px .1px .1px rgb(80, 77, 77);
 }
 .Contact_Section{
     margin-top: 2rem;
     border-top: 5px solid orangered;
     border-bottom: 5px solid orangered;
+    background-image: radial-gradient(#ffb9b9 20%, transparent 20%);
+    z-index: -111;
+    background-position: 0 0, 50px 50px;
+    background-size: 40px 40px;
+    background-color: #fed1d1;
 }
 .Contact_Section div{
     margin: -2rem 7rem 1rem 7rem;
