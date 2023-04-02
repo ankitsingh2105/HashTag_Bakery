@@ -31,6 +31,9 @@ export default function Contact() {
                     <div className="secondDivs">9650988301</div>
                 </section>
             </main>
+            <div className="align">Designed and Developed by</div>
+            <div className="align"><a href="http://ankitsinghchauhan.tech" target="_blank" rel="noopener noreferrer">Ankit Singh Chauhan</a></div>
+            <br />
         </>
     )
 }

@@ -73,7 +73,7 @@
         height: 371px;
     }
     .main_heading_review{
-        margin-bottom: 0rem;
+        margin-bottom: -30px;
     }
 }
 @media screen and (max-width: 553px) {
