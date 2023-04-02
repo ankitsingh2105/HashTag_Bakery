@@ -75,6 +75,16 @@ strong {
 }
 
 /* TODO: floating button css  */
+
+/* todo : floating number */
+.floatingNumbers {
+    position: fixed;
+    right: 3%;
+    bottom: 12%;
+    font-size: 30px;
+    color: black;
+    z-index: 909999999;
+}
 .go {
     position: fixed;
     right: 3%;
@@ -83,6 +93,7 @@ strong {
     border-radius: 54px;
     padding: 12px 12px;
     background-color: rgb(255, 76, 106);
+    z-index: 90909090;
 }
 
 /* todo:  */
@@ -90,14 +101,20 @@ strong {
     margin: 3rem 4px 0px 4px;
     border-radius: 3px;
     box-shadow: -1px 3px 4px rgb(138, 136, 136);
-    background-color: #edeeee;
+    background-color: white;
     width: 260px;
     height: 350px;
+    transition-duration: .3s;
+}
+
+.unique:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03)
 }
 
 .unique img {
-    width: 230px;
-    height: 230px;
+    width: 260px;
+    height: 242px;
     margin: 5px;
 }
 
@@ -126,16 +143,6 @@ strong {
 
 button:hover {
     cursor: pointer;
-}
-
-
-/* todo : floating number */
-.floatingNumbers {
-    position: fixed;
-    right: 3%;
-    bottom: 12%;
-    font-size: 30px;
-    color: black;
 }
 
 
@@ -189,9 +196,8 @@ button:hover {
     }
 
     .unique img {
-        width: 230px;
-        height: 230px;
-        margin: 5px;
+        width: 260px;
+        height: 241px;
     }
 
     .container331,
@@ -204,15 +210,14 @@ button:hover {
 }
 
 @media screen and (max-width: 595px) {
-    .unique{
+    .unique {
         height: 340px;
         width: 236px;
     }
 
     .unique img {
-        width: 220px;
-        height: 220px;
-        margin: 5px;
+        width: 236px;
+        height: 235px;
     }
 
     .grid_system {
@@ -240,15 +245,14 @@ button:hover {
         grid-template-columns: 10rem 10rem;
     }
 
-    .unique{
+    .unique {
         height: 280px;
         width: 180px;
     }
 
     .unique img {
-        width: 170px;
-        height: 170px;
-        margin: 5px;
+        width: 180px;
+        height: 178px;
     }
 
 }
@@ -256,7 +260,7 @@ button:hover {
 @media screen and (max-width: 390px) {
     .grid_system {
         display: grid;
-        grid-template-columns: 12rem 11rem;
+        grid-template-columns: 11rem 11rem;
         margin-top: 50px;
     }
 
@@ -271,13 +275,14 @@ button:hover {
     .bakery_name p {
         margin: 0px 14px;
     }
-    .unique{
+
+    .unique {
         height: 270px;
         width: 170px;
     }
+
     .unique img {
-        width: 160px;
-        height: 160px;
-        margin: 5px;
+        width: 169px;
+        height: 172px;
     }
 }

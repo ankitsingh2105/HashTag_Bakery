@@ -1,9 +1,9 @@
 body {
     background-color: white;
-    background-image: radial-gradient(#fad8d8 20%, transparent 20%);
+    background-image: radial-gradient(#fad8d8 7%, transparent 20%);
     z-index: -111;
-    background-position: 0 0, 50px 50px;
-    background-size: 40px 40px;
+    background-position: 0 0, 10px 10px;
+    background-size: 50px 50px;
 }
 
 /* todo: navbar section */

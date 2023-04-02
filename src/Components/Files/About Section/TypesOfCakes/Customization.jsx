@@ -13,6 +13,26 @@ import image47 from './assets/cake57.jpeg'
 import CakeCard from '../CakeCard'
 const pdtArray = [
     {
+        id: '28',
+        name: "Jungle Theme cake",
+        images: image44
+    },
+    {
+        id: '29',
+        name: "Kids cake",
+        images: image45
+    },
+    {
+        id: '30',
+        name: "Forest cake",
+        images: image46
+    },
+    {
+        id: '31',
+        name: "Boy cake",
+        images: image47
+    },
+    {
         id: '17',
         name: "2 year Cake",
         images: image21
@@ -57,29 +77,9 @@ const pdtArray = [
         name: "Unicorn cake",
         images: image29
     },
-    {
-        id: '28',
-        name: "Jungle Theme cake",
-        images: image44
-    },
-    {
-        id: '29',
-        name: "Kids cake",
-        images: image45
-    },
-    {
-        id: '30',
-        name: "Forest cake",
-        images: image46
-    },
-    {
-        id: '31',
-        name: "Boy cake",
-        images: image47
-    },
 ]
 export default function SameDay(props) {
-    return(
+    return (
         <>
             <CakeCard pdtArray={pdtArray} title="Customization Cakes" />
         </>
