@@ -1,7 +1,8 @@
 import homeImage from "./Hashtag.png";
 import main_image from "./main_image.png"
 import "./main.css";
-export default function Home() {
+export default function Home(props) {
+    const {home , products , contact} = props;
     return (
         <>
             <nav className="nav_section" >
@@ -9,9 +10,9 @@ export default function Home() {
                     <img src={homeImage} className='mainImage' alt="" />
                 </div>
                 <div className="items">
-                    <li className="list list1">Home</li>
-                    <li className="list">Our Products</li>
-                    <li className="list"><a href="tel:9650988301">Contact</a></li>
+                    <li onClick={() => { home()}} className="list list1">Home</li>
+                    <li onClick={() => { products()}} className="list">Our Products</li>
+                    <li onClick={() => { contact()}} className="list"><a href="tel:9650988301">Contact</a></li>
                 </div>
                 <div className="logo2">
                     <img src={homeImage} className='mainImage2' alt="" />

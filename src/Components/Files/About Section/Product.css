@@ -18,6 +18,7 @@
 .productjsx h1 {
     font-size: 60px;
     color: orange;
+    margin-top: 1.5rem;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -176,10 +177,8 @@ button:hover {
         font-size: 20px;
     }
 
-    .container331,
-    .container332 {
+    .container331{
         margin-top: 30px;
-        display: grid;
         grid-template-columns: 13rem 13rem 13rem;
     }
 
@@ -200,11 +199,10 @@ button:hover {
         height: 241px;
     }
 
-    .container331,
-    .container332 {
+    .container331{
         margin-top: 30px;
         display: grid;
-        grid-template-columns: 13rem 13rem;
+        grid-template-columns: 13rem 13rem 13rem;
     }
 
 }
@@ -238,11 +236,20 @@ button:hover {
         margin-top: 50px;
     }
 
-    .container331,
-    .container332 {
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: 10rem 10rem;
+    .container331 {
+        margin-top: 40px;
+        grid-template-columns: 8.2rem 8.2rem 8.2rem;
+    }
+
+    .img12 {
+        width: 80px;
+        height: 80px;
+        border: 7px solid yellowgreen;
+        transition: all .2s ease;
+    }
+
+    .pdt_name{
+        font-size: 13.5px;
     }
 
     .unique {
@@ -284,5 +291,20 @@ button:hover {
     .unique img {
         width: 169px;
         height: 172px;
+    }
+
+    .container331 {
+        margin-top: 30px;
+        grid-template-columns: 7rem 7rem 7rem;
+    }
+
+    .img12 {
+        width: 80px;
+        height: 80px;
+        border: 7px solid yellowgreen;
+        transition: all .2s ease;
+    }
+    .pdt_name{
+        font-size: 12px;
     }
 }

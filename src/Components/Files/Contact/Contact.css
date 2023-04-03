@@ -13,9 +13,10 @@
 }
 /*  * custom css ends */
 
-h1{
+.contact_heading{
     font-size: 60px;
     color: orange;
+    margin: 1.5rem;
     text-shadow: .7px .1px .1px rgb(80, 77, 77);
 }
 .Contact_Section{
@@ -28,7 +29,7 @@ h1{
     background-color: white;
 }
 .Contact_Section div{
-    margin: -2rem 7rem 1rem 7rem;
+    margin: -3rem 7rem 1rem 7rem;
     font-size: 19px;
     font-weight: bolder;
     letter-spacing: 2px;
@@ -81,7 +82,7 @@ h1{
 }
 @media screen and (max-width: 865px) {
     .Contact_Section div {
-        margin: -2rem 1rem 1rem 1rem;
+        margin: -3.5rem 1rem 1rem 1rem;
     }
 }
 @media screen and (max-width: 504px) {

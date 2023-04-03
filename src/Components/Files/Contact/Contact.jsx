@@ -3,7 +3,7 @@ export default function Contact() {
     return (
         <>
             <main className="align Contact_Section" >
-                <h1>
+                <h1 className="contact_heading">
                     Contact Us
                 </h1>
                 <aside className="align2">
