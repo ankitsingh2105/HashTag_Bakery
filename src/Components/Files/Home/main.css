@@ -80,7 +80,7 @@ main {
 
 .firstPage {
     border-bottom: 5px solid orangered;
-    background-image: radial-gradient(#ffb9b9 20%, transparent 20%);
+    background-image: radial-gradient(#ffb9b9 8%, transparent 20%);
     z-index: -111;
     background-position: 0 0, 50px 50px;
     background-size: 40px 40px;
