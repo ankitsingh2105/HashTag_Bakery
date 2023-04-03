@@ -2,7 +2,7 @@ import { useRef, useContext , useEffect } from "react";
 import { Number } from "../Cart/Cart"   
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Product.css"
-import temp from "./TypesOfCakes/assets/temp.jpg"
+import temp from "./TypesOfCakes/assets/temp.png"
 export default function Cake(props) {
   const { name, images, bold, cut, Add_Products, id } = props;
   const state = useRef(null);
