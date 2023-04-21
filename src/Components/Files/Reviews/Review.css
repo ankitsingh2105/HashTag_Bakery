@@ -43,6 +43,9 @@
 }
 .main_heading_review{
     margin-bottom: 6rem;
+    font-size: 60px;
+    color: orange;
+    text-shadow: 0.7px 0.1px 0.1px rgb(80, 77, 77);
 }
 
 @media screen and (max-width: 1107px) {

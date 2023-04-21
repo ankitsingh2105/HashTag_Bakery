@@ -6,10 +6,10 @@ import image2 from "./TypesOfCakes/assets/cake61.jpeg";
 import image3 from "./TypesOfCakes/assets/cake81.jpeg";
 import image4 from "./TypesOfCakes/assets/cake78.jpeg";
 import flower16 from './TypesOfCakes/assets/flower16.jpeg'
-export default function About() {
+export default function About(props) {
     return (
         <>
-            <div className="SecondPage">
+            <div className="SecondPage" id={props.id}>
 
                 {/* TODO : floating button */}
                 <div className="go">

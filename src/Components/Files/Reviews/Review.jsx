@@ -2,11 +2,12 @@ import React from 'react'
 import "./Review.css"
 import man from "./man.png"
 import woman from "./woman.png"
-export default function Review() {
+export default function Review(props) {
+  const {id} =props;
   return (
     <>
-    <div className= "review_div" >
-      <h1 className="align main_heading_review"> Reviews</h1>
+    <div className= "review_div" id = {id} >
+      <h1 className="align main_heading_review  "> Reviews</h1>
       <div className="review_div2">
         <div className="review_card">
           <img className="review_class_image" src={man} alt="" />

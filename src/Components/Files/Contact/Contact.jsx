@@ -1,8 +1,9 @@
 import "./Contact.css"
-export default function Contact() {
+export default function Contact(props) {
+    const {id} =props;
     return (
         <>
-            <main className="align Contact_Section" >
+            <main className="align Contact_Section" id= {props} >
                 <h1 className="contact_heading">
                     Contact Us
                 </h1>

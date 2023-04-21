@@ -1,4 +1,4 @@
-import React, { lazy, useRef } from "react";
+import React, { lazy } from "react";
 import { Suspense } from "react";
 import "./index.css";
 import SyncLoader from "react-spinners/SyncLoader";
@@ -9,17 +9,6 @@ const Contact = lazy(() => import("./Components/Files/Contact/Contact"));
 const Reviews = lazy(() => import("./Components/Files/Reviews/Review"));
 
 export default function Layout(props) {
-  const homeRef = useRef(null);
-
-  const scrollSection = (elementRef) => {
-    if (elementRef.current) {
-      window.scrollTo({
-        top: elementRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <>
       <Suspense
@@ -32,8 +21,8 @@ export default function Layout(props) {
           </div>
         }
       >
-        <Home home={() => scrollSection(homeRef)} ref={homeRef} />
-        <Products />
+        <Home id="home" />
+        <Products id="products" />
         <Suspense
           fallback={
             <div
@@ -50,7 +39,7 @@ export default function Layout(props) {
         >
           {props.children}
         </Suspense>
-        <Reviews />
+        <Reviews id="reviews" />
         <Contact />
       </Suspense>
     </>
