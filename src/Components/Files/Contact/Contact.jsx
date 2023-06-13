@@ -1,6 +1,5 @@
 import "./Contact.css"
 export default function Contact(props) {
-    const {id} =props;
     return (
         <>
             <main className="align Contact_Section" id= {props} >

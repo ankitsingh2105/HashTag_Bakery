@@ -32,12 +32,18 @@ export default function Display() {
     return (
         <>
             <h4 className='align4'>Thanks for visiting</h4>
+            <main className="align4">
+            <div class="display_grid">
             {
                 newList.map((e) => {
                     const { id } = e;
-                    return <Card key={id} DeleteItem={() => DeleteItem(id)}  {...e} />
+                    return <>
+                            <Card key={id} DeleteItem={() => DeleteItem(id)}  {...e} />
+                    </>
                 })
             }
+            </div>
+            </main>
             <div className="align4 buttonOrder" style={{ "marginTop": "60px" }} >
                 <button style={{ "fontSize": "20px" }} onClick={SendInfo}>Order Now</button>
             </div>

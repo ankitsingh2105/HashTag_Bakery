@@ -13,9 +13,9 @@ export default function Card(props) {
     }
     const { id, images, name } = props;
     return (
-        <div id={id} className='align4 displaySet' style={setstyle} >
+        <div id={id}  className='align4 displaySet' style={setstyle} >
             <main>
-                <div className="border align4">
+                <div className="align4">
                     <img src={images} alt="" />
                     <h3>{name}</h3>
                 </div>
