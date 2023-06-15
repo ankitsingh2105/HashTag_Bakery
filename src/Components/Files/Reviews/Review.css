@@ -1,11 +1,24 @@
-.review_class_image{
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffe100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fd6e00;
+}
+
+.review_class_image {
     width: 100px;
     height: 100px;
     border-radius: 1000px;
     margin-top: -50px;
     border: 10px solid white;
 }
-.review_card{
+
+.review_card {
     margin: 0px 30px;
     width: 500px;
     height: 400px;
@@ -16,32 +29,38 @@
     border-radius: 12px;
     box-shadow: 2px 2px 7px black;
 }
-.review{
+
+.review {
     padding: 10px 20px;
     font-weight: 600;
     letter-spacing: 1.3px;
     line-height: 27px;
 }
-.fa-star{
+
+.fa-star {
     color: gold;
     margin: 0px 2px;
     text-shadow: 1px 1px 1px black;
 }
-.review_div{
-    margin : 6rem 0rem;
+
+.review_div {
+    margin-bottom: 6rem;
     border-top: 5px solid orangered;
 }
-.name{
-    font-size:23px;
+
+.name {
+    font-size: 23px;
     color: orangered;
     font-weight: bolder;
 }
-.review_div2{
+
+.review_div2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.main_heading_review{
+
+.main_heading_review {
     margin-bottom: 6rem;
     font-size: 60px;
     color: orange;
@@ -49,43 +68,51 @@
 }
 
 @media screen and (max-width: 1107px) {
-    .review_card{
+    .review_card {
         height: 450px;
     }
 }
+
 @media screen and (max-width: 1016px) {
-    .review_card{
+    .review_card {
         height: 450px;
         margin: 0px 10px;
     }
-    .review{
+
+    .review {
         padding: 10px 15px;
     }
 }
+
 @media screen and (max-width: 882px) {
-    .review_card{
+    .review_card {
         height: 470px;
     }
 }
+
 @media screen and (max-width: 816px) {
-    .review_div2{
+    .review_div2 {
         flex-direction: column;
     }
-    .review_card{
+
+    .review_card {
         margin-top: 100px;
         height: 371px;
     }
-    .main_heading_review{
+
+    .main_heading_review {
         margin-bottom: -30px;
     }
 }
+
 @media screen and (max-width: 553px) {
-    .review_card{
+    .review_card {
         width: 400px;
     }
 }
+
 @media screen and (max-width: 416px) {
-    .review_card{
+    .review_card {
         width: 340px;
     }
 }

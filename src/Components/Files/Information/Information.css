@@ -1,0 +1,66 @@
+.feature_ul {
+    display: grid;
+    grid-template-columns: 23rem 23rem;
+    grid-gap: 3rem;
+    padding: 1rem 3rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 38px;
+    color: greenyellow;
+    text-shadow: 1px 1px 1px black;
+}
+
+.Info_heading {
+    font-size: 60px;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+.Info_main {
+    border-top: 5px solid red;
+    margin-top: 5rem;
+}
+
+.feature_ul li {
+    font-weight: bolder;
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessibility,
+.services,
+.payment , .amenities {
+    border: 1px solid black;
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 901px) {
+
+    .feature_ul {
+        grid-template-columns: 18rem 18rem;
+        padding: 1rem 0rem;
+    }
+}
+@media screen and (max-width: 634px) {
+
+    .feature_ul {
+        grid-template-columns: 14rem 14rem;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .feature_ul {
+        grid-template-columns: 10rem 10rem;
+        grid-gap: 2rem;
+        padding: 0px 1rem;
+    }
+    .feature_ul li{
+        font-size: 15px;
+    }
+}

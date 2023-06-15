@@ -7,6 +7,7 @@ const Home = lazy(() => import("./Components/Files/Home/Home"));
 const Products = lazy(() => import("./Components/Files/About Section/Product"));
 const Contact = lazy(() => import("./Components/Files/Contact/Contact"));
 const Reviews = lazy(() => import("./Components/Files/Reviews/Review"));
+const Information = lazy(() => import("./Components/Files/Information/Information"));
 
 export default function Layout(props) {
   return (
@@ -39,6 +40,7 @@ export default function Layout(props) {
         >
           {props.children}
         </Suspense>
+        <Information/>
         <Reviews id="reviews" />
         <Contact />
       </Suspense>
